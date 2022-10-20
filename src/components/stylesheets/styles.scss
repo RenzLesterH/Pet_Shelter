@@ -14,6 +14,7 @@ body {
     background-color: #F5F5F5;
 }
 
+/*Navbar component css*/
 header {
     nav {
         background: #FFFFFF;
@@ -75,6 +76,7 @@ header {
     }
 }
 
+/*Banner component css*/
 section#pet_shelter_banner {
     margin: 40px auto;
     width: 862px; // temporary size
@@ -111,6 +113,7 @@ section#pet_shelter_banner {
     }
 }
 
+/*Main content component css*/
 main {
     margin: 50px auto;
     width: 862px;
@@ -164,3 +167,5 @@ main {
         }
     }
 }
+
+/*Footer component css*/
