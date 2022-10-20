@@ -3,80 +3,101 @@
     src: url(../fonts/kanit-regular.otf);
 }
 
-*{
-    outline: 1px solid black;
+* {
+    // outline: 1px solid black;
     padding: 0px;
-    margin:0px;
+    margin: 0px;
     font-family: header_font;
 }
 
-header{
-    nav{
+body {
+    background-color: #F5F5F5;
+}
+
+header {
+    nav {
         background: #FFFFFF;
         border-radius: 4px;
         box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.15);
         margin: 10px auto;
         padding: 15px 18px;
         width: 865px; // temporary size
-        ul{
-            li{ 
+
+        ul {
+            li {
                 display: inline-block;
                 font-size: 14px;
                 list-style: none;
                 margin: 0px 24px;
                 vertical-align: middle;
-                a{
-                    color: #BDBDBD;  
+
+                a {
+                    color: #BDBDBD;
                     font-weight: 400;
                     line-height: 21px;
                     text-decoration: none;
                 }
+
                 a:hover {
                     color: #FF5C4C;
                 }
             }
-            #brand_name{
+
+            #brand_name {
                 margin: 0px 268px 0px 0px; // temporary margin left
-                a{
+
+                a {
                     color: black;
                     font-size: 24px;
-                } 
+                }
             }
-            #add_pet_to_shelter{
+
+            #add_pet_to_shelter {
                 background-color: #FF5C4C;
                 border-radius: 7px;
                 color: white;
                 margin-right: 0px;
                 padding: 6px 11px;
-                a{
+
+                a {
                     color: white;
-                    i{
+
+                    i {
                         margin: 0px 9px 0px 0px;
                     }
                 }
+            }
+
+            #add_pet_to_shelter:hover {
+                background-color: #e95346;
             }
         }
     }
 }
 
-section#pet_shelter_banner{
+section#pet_shelter_banner {
     margin: 40px auto;
     width: 862px; // temporary size
-    div#pet_shelter_banner_moto{
+
+    div#pet_shelter_banner_moto {
         display: inline-block;
         vertical-align: top;
         width: 264.03px;
-        h1{
+
+        h1 {
             font-size: 48px;
             line-height: 60px;
-            span:first-child{
+
+            span:first-child {
                 color: #FF5C4C;
             }
-            span{
+
+            span {
                 color: #BDBDBD;
             }
         }
-        h5{
+
+        h5 {
             color: #BDBDBD;
             font-size: 14px;
             font-weight: 400;
@@ -84,18 +105,62 @@ section#pet_shelter_banner{
             margin-top: 21px;
         }
     }
-    img#pet_shelter_banner{
+
+    img#pet_shelter_banner {
         width: 595.32px;
     }
 }
 
-main{
-    margin: 56px auto;
+main {
+    margin: 50px auto;
     width: 862px;
-    h3{
+
+    h3 {
         font-size: 24px;
         font-weight: 400;
         line-height: 36px;
         text-align: center;
+        margin-bottom: 17px;
+    }
+
+    table {
+        font-size: 18px;
+        width: 862px;
+        border-collapse: separate;
+        border-spacing: 0 5px;
+
+        tr {
+            background: #FFFFFF;
+            box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.05);
+            border-radius: 4px;
+            margin: 100px 0px;
+
+            td {
+                padding: 17px 23px;
+
+                button {
+                    font-size: 18px;
+                    border: none;
+                    background-color: transparent;
+                    color: #BDBDBD;
+
+                    i {
+                        margin: 0px 15px 0px 35px;
+                    }
+                }
+
+                button:hover {
+                    color: black;
+                }
+            }
+
+            .pet_name {
+                width: 325px;
+            }
+
+            .pet_type {
+                width: 164px;
+            }
+        }
     }
 }

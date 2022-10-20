@@ -7,8 +7,40 @@ class Pet_details extends Component {
         return (
             <main>
                 <h3>These pets are looking for a good home</h3>
-                <div className="pet-descriptions"></div>
-                <div className="pet-descriptions"></div>
+                <table>
+                    <tr>
+                        <td className="pet_name">Garfied</td>
+                        <td class="pet_type">Cat</td>
+                        <td>
+                            <button><i class="fas fa-clipboard-list"></i>Details</button>
+                            <button><i className="fas fa-pen-square"></i>Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="pet_name">Doraemon</td>
+                        <td class="pet_type">Cat</td>
+                        <td>
+                            <button><i class="fas fa-clipboard-list"></i>Details</button>
+                            <button><i className="fas fa-pen-square"></i>Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="pet_name">Snoopy</td>
+                        <td class="pet_type">Dog</td>
+                        <td>
+                            <button><i class="fas fa-clipboard-list"></i>Details</button>
+                            <button><i className="fas fa-pen-square"></i>Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="pet_name">Dug</td>
+                        <td class="pet_type">Dog</td>
+                        <td>
+                            <button><i class="fas fa-clipboard-list"></i>Details</button>
+                            <button><i className="fas fa-pen-square"></i>Edit</button>
+                        </td>
+                    </tr>
+                </table>
             </main>
         );
     }
