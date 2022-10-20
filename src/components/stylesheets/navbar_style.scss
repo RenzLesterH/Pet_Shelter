@@ -1,0 +1,60 @@
+@font-face {
+    font-family: header_font;
+    src: url(../fonts/kanit-regular.otf);
+}
+
+*{
+    outline: 1px solid black;
+    padding: 0px;
+    margin:0px;
+}
+
+header{
+    nav{
+        background: #FFFFFF;
+        border-radius: 4px;
+        box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.15);
+        margin: 10px auto;
+        padding: 15px 18px;
+        width: 900px; // temporary size
+        ul{
+            li{ 
+                display: inline-block;
+                font-family: header_font;
+                font-size: 14px;
+                list-style: none;
+                margin: 0px 24px;
+                vertical-align: middle;
+                a{
+                    color: #BDBDBD;  
+                    text-decoration: none;
+                    line-height: 21px;
+                    font-weight: 400;
+                }
+                a:hover {
+                    color: #FF5C4C;
+                }
+            }
+            #brand_name{
+                margin: 0px 303px 0px 0px; // temporary margin left
+                a{
+                    font-size: 24px;
+                    color: black;
+                } 
+            }
+            #add_pet_to_shelter{
+                background-color: #FF5C4C;
+                border-radius: 7px;
+                padding: 6px 11px;
+                color: white;
+                margin-right: 0px;
+                a{
+                    color: white;
+                    i{
+                        margin: 0px 9px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
