@@ -4,7 +4,7 @@
 }
 
 * {
-    // outline: 1px solid black;
+    outline: 1px solid black;
     padding: 0px;
     margin: 0px;
     font-family: header_font;
@@ -171,6 +171,8 @@ main {
 
 /*Footer component css*/
 footer {
+    margin: 0px auto;
+
     p {
         font-size: 14px;
         font-weight: 400;
