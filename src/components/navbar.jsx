@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-import './stylesheets/navbar_style.scss';
+
+import Banner from "./banners";
+import './stylesheets/styles.scss';
 
 class Navbar extends Component {
     // state = {  } 
     render() { 
         return (
+            <React.Fragment>
             <header>
                 <nav>
                   <ul>
@@ -16,6 +19,8 @@ class Navbar extends Component {
                   </ul>
                 </nav>
             </header>
+            <Banner/>
+            </React.Fragment>
         );
     }
 }
