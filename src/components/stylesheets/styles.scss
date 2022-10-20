@@ -4,7 +4,7 @@
 }
 
 * {
-    // outline: 1px solid black;
+    outline: 1px solid black;
     padding: 0px;
     margin: 0px;
     font-family: header_font;
@@ -85,6 +85,7 @@ section#pet_shelter_banner {
         display: inline-block;
         vertical-align: top;
         width: 264.03px;
+        padding-top: 25px;
 
         h1 {
             font-size: 48px;
