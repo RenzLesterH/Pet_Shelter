@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import Banner from "./banners";
 import './stylesheets/styles.scss';
 
 class Navbar extends Component {
@@ -20,7 +19,6 @@ class Navbar extends Component {
                   </ul>
                 </nav>
             </header>
-            <Banner/>
             </React.Fragment>
         );
     }
