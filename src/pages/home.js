@@ -13,6 +13,7 @@ class Home extends Component {
   } 
   render() {
     let { pets } = this.state;
+    console.log(this.props);
     return (
       <React.Fragment>
         <Navbar />

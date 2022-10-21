@@ -4,13 +4,18 @@ import Add_pet from "./pages/add_pet";
 import Home from "./pages/home";
 
 class App extends Component {
-  // state = {  } 
+  state = { 
+    data:0
+  }
+  onclick= () => {
+    console.log("Hello!");
+  } 
   render() {
     return (
       <Router>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/add-pet" element={<Add_pet />}/>
+          <Route path="/" element={<Home data={123}/>}/>
+          <Route path="/add-pet" element={<Add_pet handleOnClick={this.onclick} />}/>
         </Routes>
       </Router>
     );
