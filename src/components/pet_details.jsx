@@ -14,9 +14,9 @@ class Pet_details extends Component {
                 {pets_data.map((pets) => (
                     <tr>
                         <td className="pet_name" key={pets.name}>{pets.name}</td>
-                        <td class="pet_type" key={pets.type}>{pets.type}</td>
+                        <td className="pet_type" key={pets.type}>{pets.type}</td>
                         <td>
-                            <button><i class="fas fa-clipboard-list"></i>Details</button>
+                            <button><i className="fas fa-clipboard-list"></i>Details</button>
                             <button><i className="fas fa-pen-square"></i>Edit</button>
                         </td>
                     </tr>

@@ -1,7 +1,28 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
-    // state = {  } 
+    // state = {  }
+    
+    handleOnSubmit = (event) => {
+        event.preventDefault();
+        let data_form = event.target;
+        this.props.onAdd({
+          id: 11,
+          name: data_form.pet_name.value,
+          type: data_form.pet_type.value,
+          description: data_form.pet_desc.value,
+          skill_1: data_form.pet_skill_1.value,
+          skill_2: data_form.pet_skill_2.value,
+          skill_3: data_form.pet_skill_3.value,
+        });
+        data_form.pet_name.value = "";
+        data_form.pet_type.value = "";
+        data_form.pet_desc.value = "";
+        data_form.pet_skill_1.value = "";
+        data_form.pet_skill_2.value = "";
+        data_form.pet_skill_3.value = "";
+    };
+
     render() { 
         return (
             <section id="add_pet">
@@ -25,10 +46,10 @@ class Form extends Component {
                     <div>
                         <label>Skills</label>
                         <input type="text" name="pet_skill_1" id="skill_1" required />
-                        <input type="text" name="pet_skill_2" class="pet_skills" required />
-                        <input type="text" name="pet_skill_3" class="pet_skills" required />
+                        <input type="text" name="pet_skill_2" className="pet_skills" required />
+                        <input type="text" name="pet_skill_3" className="pet_skills" required />
                     </div>
-                    <button type="submit"><i class="fas fa-upload"></i>Add Pet</button>
+                    <button type="submit"><i className="fas fa-upload"></i>Add Pet</button>
                 </form>
             </section>
         );

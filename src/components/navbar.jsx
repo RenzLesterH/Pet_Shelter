@@ -11,10 +11,10 @@ class Navbar extends Component {
                 <nav>
                   <ul>
                       <li id="brand_name"><a href='/'>PETSHELTER</a></li>
-                      <li class="nav_links"><a href='/'>Home</a></li>
-                      <li class="nav_links"><a href='#'>Services</a></li>
-                      <li class="nav_links"><a href='#'>Events</a></li>
-                      <li id="add_pet_to_shelter"><a href='add-pet'><i class="fas fa-plus-circle"></i>Add pet to Shelter</a></li>
+                      <li className="nav_links"><a href='/'>Home</a></li>
+                      <li className="nav_links"><a href='#'>Services</a></li>
+                      <li className="nav_links"><a href='#'>Events</a></li>
+                      <li id="add_pet_to_shelter"><a href='add-pet'><i className="fas fa-plus-circle"></i>Add pet to Shelter</a></li>
                   </ul>
                 </nav>
             </header>
