@@ -4,7 +4,7 @@
 }
 
 * {
-    outline: 1px solid black;
+    // outline: 1px solid black;
     padding: 0px;
     margin: 0px;
     font-family: header_font;
@@ -14,7 +14,7 @@ body {
     background-color: #F5F5F5;
 }
 
-header, section#pet_shelter_banner, main, footer{
+header, section, main, footer{
     width: 862px;
     margin: 0px auto;
 }
@@ -172,6 +172,69 @@ main {
                 width: 164px;
             }
         }
+    }
+}
+
+section#add_pet{
+    form{
+        width: 519px;
+        margin: auto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        padding: 24px 23px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.05);
+        border-radius: 4px;
+        div{
+            .pet_form_inputs{
+                margin-left: 200px;
+            }
+            input[type=text], select, textarea{ 
+                padding: 9px 14px;
+                background-color: #F2F2F2;
+                border-radius: 4px;
+                border: none;
+                margin-bottom: 10px;
+                
+            }
+            label{
+                color: #BDBDBD;
+            }
+            label#pet_desc_label{
+                vertical-align: top;
+            }
+            #pet_name_input{
+                margin-left: 57px;
+                width: 371px;            
+            }
+            #pet_type_select{
+                margin-left: 64px;
+                width: 399px;
+            }
+            
+            #pet_desc_textarea{
+                margin-left: 47px;
+                width: 371px;
+                height: 84px;
+            }
+            #skill_1{
+                margin-left: 87px;
+                width: 371px;
+            }
+            .pet_skills{
+                margin-left: 119px;
+                width: 371px;
+            }
+        }
+        input[type=submit]{
+            background-color: #FF5C4C;
+            color: white;
+            padding: 7px 23px;
+            border: none;
+            border-radius: 5px;
+        }  
     }
 }
 
