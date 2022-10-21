@@ -16,7 +16,7 @@ class Navbar extends Component {
                       <li class="nav_links"><a href='#'>Home</a></li>
                       <li class="nav_links"><a href='#'>Services</a></li>
                       <li class="nav_links"><a href='#'>Events</a></li>
-                      <li id="add_pet_to_shelter"><a href='#'><i class="fas fa-plus-circle"></i>Add pet to Shelter</a></li>
+                      <li id="add_pet_to_shelter"><a href='add-pet'><i class="fas fa-plus-circle"></i>Add pet to Shelter</a></li>
                   </ul>
                 </nav>
             </header>
