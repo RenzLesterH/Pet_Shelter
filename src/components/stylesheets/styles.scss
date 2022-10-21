@@ -4,7 +4,7 @@
 }
 
 * {
-    // outline: 1px solid black;
+    outline: 1px solid black;
     padding: 0px;
     margin: 0px;
     font-family: header_font;
@@ -47,10 +47,6 @@ header {
                     color: #FF5C4C;
                 }
             }
-            
-            #back_to_home{
-                display: none;
-            }
 
             #brand_name {
                 margin: 0px 229px 0px 0px;
@@ -92,7 +88,7 @@ section#pet_shelter_banner {
         display: inline-block;
         vertical-align: top;
         width: 264.03px;
-        padding-top: 25px;
+        padding: 25px 0px 0px 2px;
 
         h1 {
             font-size: 48px;
@@ -217,7 +213,8 @@ section#add_pet{
             
             #pet_desc_textarea{
                 margin-left: 47px;
-                width: 371px;
+                min-width: 371px;
+                max-width: 371px;
                 height: 84px;
             }
             #skill_1{

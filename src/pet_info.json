@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "name":"Garfied",
+        "type":"Cat",
+        "description":"Hates Monday", 
+        "skills": {
+            "skill_1":"Eating",
+            "skill_2":"Sleeping",
+            "skill_3":"Slacking off"
+        }
+    },
+    {
+        "id":2,
+        "name":"Doraemon",
+        "type":"Cat",
+        "description":"Loves to eat hopia", 
+        "skills": {
+            "skill_1":"Eating a lot",
+            "skill_2":"Sleepin a lot",
+            "skill_3":"Doing Nothing"
+        }
+    },
+    {
+        "id":3,
+        "name":"Snoopy",
+        "type":"Dog",
+        "description":"A big dog", 
+        "skills": {
+            "skill_1":"Fetch",
+            "skill_2":"Knows command",
+            "skill_3":"Can guard you"
+        }
+    },
+    {
+        "id":4,
+        "name":"Dug",
+        "type":"Dog",
+        "description":"Loves to play", 
+        "skills": {
+            "skill_1":"Fetch",
+            "skill_2":"Knows a lot of tricks",
+            "skill_3":"Can do household works"
+        }
+    }
+]
