@@ -176,6 +176,7 @@ main {
 }
 
 section#add_pet{
+    margin: 0px auto 60px auto;
     form{
         width: 519px;
         margin: auto;
@@ -228,12 +229,16 @@ section#add_pet{
                 width: 371px;
             }
         }
-        input[type=submit]{
+        button[type=submit]{
             background-color: #FF5C4C;
             color: white;
-            padding: 7px 23px;
+            padding: 7px 11px;
             border: none;
             border-radius: 5px;
+            i{
+                margin-right: 10px;
+            }
+            margin: 31px 0px 0px 424px;
         }  
     }
 }

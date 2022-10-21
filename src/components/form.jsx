@@ -28,7 +28,7 @@ class Form extends Component {
                         <input type="text" class="pet_skills" name="" />
                         <input type="text" class="pet_skills" name="" />
                     </div>
-                    <input type="submit" value="Add Pet" />
+                    <button type="submit"><i class="fas fa-upload"></i>Add Pet</button>
                 </form>
             </section>
         );
