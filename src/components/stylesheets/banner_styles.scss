@@ -1,0 +1,36 @@
+/*Banner component css*/
+section#pet_shelter_banner {
+    margin: 40px auto;
+
+    div#pet_shelter_banner_moto {
+        display: inline-block;
+        vertical-align: top;
+        width: 264.03px;
+        padding: 25px 0px 0px 2px;
+
+        h1 {
+            font-size: 48px;
+            line-height: 60px;
+
+            span:first-child {
+                color: #FF5C4C;
+            }
+
+            span {
+                color: #BDBDBD;
+            }
+        }
+
+        h5 {
+            color: #BDBDBD;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20.93px;
+            margin-top: 21px;
+        }
+    }
+
+    img#pet_shelter_banner {
+        width: 595.32px;
+    }
+}

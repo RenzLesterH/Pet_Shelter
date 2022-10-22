@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import './stylesheets/styles.scss';
+import './stylesheets/navbar_styles.scss';
 
 class Navbar extends Component {
     // state = {  } 

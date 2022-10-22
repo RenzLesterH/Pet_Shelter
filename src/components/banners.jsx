@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import './stylesheets/styles.scss';
+import './stylesheets/banner_styles.scss';
 import Pet_banner from './images/banner.png';
 
 class Banners extends Component {

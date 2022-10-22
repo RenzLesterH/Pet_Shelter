@@ -1,0 +1,22 @@
+/*Footer component css*/
+footer {
+    margin: 0px auto;
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #BDBDBD;
+
+        a {
+            color: #FF5C4C;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #e95346;
+        }
+    }
+}

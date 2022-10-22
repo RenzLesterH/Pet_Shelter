@@ -1,0 +1,53 @@
+/*Main content component css*/
+main {
+    margin: 50px auto 40px auto;
+
+    h3 {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 17px;
+    }
+
+    table {
+        font-size: 18px;
+        width: 862px;
+        border-collapse: separate;
+        border-spacing: 0 5px;
+
+        tr {
+            background: #FFFFFF;
+            box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.05);
+            border-radius: 4px;
+            margin: 100px 0px;
+
+            td {
+                padding: 17px 23px;
+
+                button {
+                    font-size: 18px;
+                    border: none;
+                    background-color: transparent;
+                    color: #BDBDBD;
+
+                    i {
+                        margin: 0px 15px 0px 35px;
+                    }
+                }
+
+                button:hover {
+                    color: black;
+                }
+            }
+
+            .pet_name {
+                width: 325px;
+            }
+
+            .pet_type {
+                width: 164px;
+            }
+        }
+    }
+}

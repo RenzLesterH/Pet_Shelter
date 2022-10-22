@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './stylesheets/styles.scss';
+import './stylesheets/form_styles.scss';
 
 class Form extends Component {
     // state = {  }
@@ -49,7 +51,7 @@ class Form extends Component {
                         <input type="text" name="pet_skill_2" className="pet_skills" required />
                         <input type="text" name="pet_skill_3" className="pet_skills" required />
                     </div>
-                    <button type="button" onClick={()=> this.props.handleOnClick()}><i className="fas fa-upload"></i>Add Pet</button>
+                    <button type="submit" onClick={()=> this.props.handleOnClick()}><i className="fas fa-upload"></i>Add Pet</button>
                 </form>
             </section>
         );

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import './stylesheets/styles.scss';
+import './stylesheets/pet_details.scss';
 
 class Pet_details extends Component {
     state = {
