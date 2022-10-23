@@ -5,15 +5,14 @@ import Navbar from "../components/navbar";
 import Banner from "../components/banners";
 import Main from "../components/pet_details";
 import Footer from "../components/footer";
-import Records from "../pet_info.json";
 
 class Home extends Component {
   state = { 
-    pets: Records
+    pets: this.props.data
   } 
   render() {
     let { pets } = this.state;
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <React.Fragment>
         <Navbar />
