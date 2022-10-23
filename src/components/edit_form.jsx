@@ -25,7 +25,8 @@ class Form extends Component {
     //     data_form.pet_skill_3.value = "";
     // };
 
-    render() { 
+    render() {
+        let { pets_data } = this.props; 
         return (
             <section id="edit_pet">
                 <form method="post" onSubmit={this.handleOnSubmit}>

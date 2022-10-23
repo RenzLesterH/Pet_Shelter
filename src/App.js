@@ -28,7 +28,7 @@ class App extends Component {
         <Routes>
           <Route path="/" element={<Home data={this.state.data}/>}/>
           <Route path="/add-pet" element={<Add_pet handleOnClick={this.onclick} />}/>
-          <Route path="/edit-pet" element={<Edit_pet />}/>
+          <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data}/>}/>
         </Routes>
       </Router>
     );
