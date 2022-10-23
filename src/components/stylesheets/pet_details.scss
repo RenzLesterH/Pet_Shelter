@@ -25,18 +25,18 @@ main {
             td {
                 padding: 17px 23px;
 
-                button {
+                a {
                     font-size: 18px;
                     border: none;
                     background-color: transparent;
                     color: #BDBDBD;
-
+                    text-decoration: none;
                     i {
                         margin: 0px 15px 0px 35px;
                     }
                 }
 
-                button:hover {
+                a:hover {
                     color: black;
                 }
             }
