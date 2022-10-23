@@ -1,17 +1,20 @@
 /*Banner component css*/
+@font-face {
+    font-family: banner_font;
+    src: url(../fonts/DoHyeon-Regular.ttf);
+}
 section#pet_shelter_banner {
     margin: 40px auto;
 
     div#pet_shelter_banner_moto {
         display: inline-block;
+        padding: 25px 0px 0px 15px;
         vertical-align: top;
         width: 264.03px;
-        padding: 25px 0px 0px 2px;
-
         h1 {
+            font-family: banner_font;
             font-size: 48px;
             line-height: 60px;
-
             span:first-child {
                 color: #FF5C4C;
             }
@@ -31,6 +34,6 @@ section#pet_shelter_banner {
     }
 
     img#pet_shelter_banner {
-        width: 595.32px;
+        width: 568px;
     }
 }
