@@ -5,12 +5,21 @@ import Home from "./pages/home";
 import Records from "./pet_info.json";
 
 class App extends Component {
-  state = { 
-    data: Records
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: Records
+    }
   }
-  onclick= () => {
-    console.log("Hello!");
+
+   onclick = async (new_data) => {
+    await this.setState(prevState => ({
+      data: [...prevState.data, new_data]
+    }))
   } 
+   
   render() {
     return (
       <Router>
