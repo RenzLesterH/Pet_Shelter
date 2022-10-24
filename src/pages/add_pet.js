@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 /* Components */
-import Navbar from "../components/navbar_add_pet";
 import Banner from "../components/banners_add_pet";
-import NotificationToast from "../components/notif_toast";
 import Footer from "../components/footer";
 import Form from "../components/form";
+import Navbar from "../components/navbar_add_pet";
+import NotificationToast from "../components/notif_toast";
 
 class Add_pet extends Component {
     state = { 
-        toast_show: true
+        toast_show: false
      }
      
      showToast = () => {
@@ -25,7 +25,7 @@ class Add_pet extends Component {
                 <NotificationToast
                     showToast = {this.state.toast_show}
                     hideToast = {() =>this.setState({toast_show: false})}
-                    message = "Added Successfully." 
+                    message = "New Pet Saved." 
                  />
                 <Footer />
             </React.Fragment>

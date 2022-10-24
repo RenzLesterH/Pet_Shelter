@@ -16,6 +16,7 @@ class Form extends Component {
             skill_2: data_form.pet_skill_2.value,
             skill_3: data_form.pet_skill_3.value,
         });
+        this.props.showToast();
     };
 
     render() {

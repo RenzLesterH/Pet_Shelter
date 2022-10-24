@@ -9,7 +9,7 @@ class NotifToast extends Component {
         const { showToast, hideToast, message} = this.props;
         return (
             <ToastContainer position="bottom-end">
-                <Toast onClose={hideToast} show={showToast} delay={3000} autohide>
+                <Toast onClose={hideToast} show={showToast} delay={2500} autohide>
                 <Toast.Body><i class="far fa-check"></i> {message}</Toast.Body>
             </Toast>
             </ToastContainer>  
