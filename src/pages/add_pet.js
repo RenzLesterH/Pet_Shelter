@@ -9,12 +9,12 @@ import Form from "../components/form";
 class Add_pet extends Component {
     // state = {  } 
     render() {
-        console.log("We are in add ", this.props); 
+        // console.log("We are in add ", this.props); 
         return (
             <React.Fragment>
                 <Navbar />
                 <Banner />
-                <Form handleOnClick={this.props.handleOnClick} />
+                <Form handleOnClick={this.props.handleOnClick} setId={this.props.setId}/>
                 <Footer />
             </React.Fragment>
         );

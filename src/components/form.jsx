@@ -9,7 +9,7 @@ class Form extends Component {
         event.preventDefault();
         let data_form = event.target;
         this.props.handleOnClick({
-          id: 11,
+          id: this.props.setId+1,
           name: data_form.pet_name.value,
           type: data_form.pet_type.value,
           description: data_form.pet_desc.value,

@@ -31,11 +31,12 @@ class App extends Component {
   }
    
   render() {
+    console.log(this.state.data);
     return (
       <Router>
         <Routes>
           <Route path="/" element={<Home data={this.state.data} getId={this.getId}/>}/>
-          <Route path="/add-pet" element={<Add_pet handleOnClick={this.onclick} />}/>
+          <Route path="/add-pet" element={<Add_pet handleOnClick={this.onclick} setId={this.state.data.length}  />}/>
           <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data} pet_id={this.state.pet_id} />}/>
         </Routes>
       </Router>
