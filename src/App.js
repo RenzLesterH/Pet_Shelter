@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router, Routes, Route} from "react-router-dom";
- 
+
+/* Pages and Json file. */
 import Add_pet from "./pages/add_pet";
 import Edit_pet from "./pages/edit_pet";
 import Home from "./pages/home";
@@ -31,7 +32,6 @@ class App extends Component {
   }
 
   onUpdate = (pet_data) => {
-    // console.log(pet_data);
     let pet = [...this.state.data];
     pet.map(pet_item => {
       if (parseInt(pet_item.id) === parseInt(pet_data.id)) {
@@ -47,16 +47,15 @@ class App extends Component {
   };
    
   render() {
-    console.log(this.state.data);
     return (
       <Router>
         <Routes>
           <Route path="/" element={<Home data={this.state.data} getId={this.getId}/>}/>
           <Route path="/add-pet" element={<Add_pet handleOnClick={this.onAdd} setId={this.state.data.length}  />}/>
-          <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data} 
-                                                     pet_id={this.state.pet_id} 
-                                                     onUpdate={this.onUpdate} />}
-                                                     />
+          <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data}
+            pet_id={this.state.pet_id}
+            onUpdate={this.onUpdate} />}
+          />
         </Routes>
       </Router>
     );
