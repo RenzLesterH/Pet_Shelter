@@ -16,6 +16,7 @@ class Form extends Component {
           skill_1: data_form.pet_skill_1.value,
           skill_2: data_form.pet_skill_2.value,
           skill_3: data_form.pet_skill_3.value,
+          likes: 0,
         });
         data_form.pet_name.value = "";
         data_form.pet_type.value = "";  

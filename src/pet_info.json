@@ -6,7 +6,8 @@
         "description":"Hates Monday", 
         "skill_1":"Eating",
         "skill_2":"Sleeping",
-        "skill_3":"Slacking off"
+        "skill_3":"Slacking off",
+        "likes":0
     },
     {
         "id":2,
@@ -15,7 +16,8 @@
         "description":"Loves to eat hopia", 
         "skill_1":"Eating a lot",
         "skill_2":"Sleepin a lot",
-        "skill_3":"Doing Nothing"
+        "skill_3":"Doing Nothing",
+        "likes":0
     },
     {
         "id":3,
@@ -24,7 +26,8 @@
         "description":"A big dog", 
         "skill_1":"Fetch",
         "skill_2":"Knows command",
-        "skill_3":"Can guard you"
+        "skill_3":"Can guard you",
+        "likes":0
     },
     {
         "id":4,
@@ -33,6 +36,7 @@
         "description":"Loves to play", 
         "skill_1":"Fetch",
         "skill_2":"Knows a lot of tricks",
-        "skill_3":"Can do household works"
+        "skill_3":"Can do household works",
+        "likes":0
     }
 ]

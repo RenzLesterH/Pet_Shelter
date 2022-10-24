@@ -23,6 +23,18 @@ class Pet_details extends Component {
 
     closeModal = () => this.setState({ isOpen: false });
 
+    updateLike = (pet_id) => {
+        // console.log(pet_id);
+        let pet = [...this.state.pets_data];
+        pet.map(pet_item => {
+        if (parseInt(pet_item.id) === parseInt(pet_id)) {
+            pet_item.likes++;
+        };
+
+        });
+        this.setState({ pet });
+    };
+
     render() {
         let { pets_data, pet_data_index } = this.state;
         return (
@@ -65,9 +77,9 @@ class Pet_details extends Component {
                         </table>
                     </Modal.Body>
                     <Modal.Footer>
-                        <h4>0 Likes</h4>
-                        <Button id="like_button"><i class="fas fa-heart"></i>Like {pets_data[pet_data_index].name}</Button>
-                        <Button id="adopt_button"><i class="fas fa-home-alt"></i>Adopt {pets_data[pet_data_index].name}</Button>
+                        <h4>{pets_data[pet_data_index].likes} Likes</h4>
+                        <Button onClick={() =>this.updateLike(pets_data[pet_data_index].id)} id="like_button"><i className="fas fa-heart"></i>Like {pets_data[pet_data_index].name}</Button>
+                        <Button id="adopt_button"><i className="fas fa-home-alt"></i>Adopt {pets_data[pet_data_index].name}</Button>
                     </Modal.Footer>
                 </Modal>
             </React.Fragment>
