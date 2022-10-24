@@ -25,7 +25,7 @@ main {
             td {
                 padding: 17px 23px;
 
-                a {
+                a, button {
                     background-color: transparent;
                     border: none;
                     color: #BDBDBD;
@@ -37,7 +37,7 @@ main {
                     }
                 }
 
-                a:hover {
+                a:hover, button:hover {
                     color: black;
                 }
             }
@@ -82,7 +82,7 @@ main {
         }
     }
     .modal-footer {
-        padding: 20px 16px;
+        padding: 23px 7px;
         background-color: #F2F2F2;
         border-top: none;
         h4{
