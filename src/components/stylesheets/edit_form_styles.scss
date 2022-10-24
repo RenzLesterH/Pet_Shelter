@@ -11,6 +11,13 @@ section#edit_pet{
         margin: auto;
         padding: 24px 23px;
         width: 565px;
+        h5{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 20px;
+        }
         div{
             .pet_form_inputs{
                 margin-left: 200px;
@@ -27,10 +34,6 @@ section#edit_pet{
             }
             label#pet_desc_label{
                 vertical-align: top;
-            }
-            #pet_name_input{
-                margin-left: 57px;
-                width: 399px;            
             }
             #pet_type_select{
                 margin-left: 64px;
@@ -61,7 +64,7 @@ section#edit_pet{
             i{
                 margin-right: 10px;
             }
-            margin: 31px 0px 0px 421px;
+            margin: 31px 0px 0px 386px;
         }  
     }
 }

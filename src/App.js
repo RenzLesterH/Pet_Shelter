@@ -17,7 +17,7 @@ class App extends Component {
     }
   }
 
-  onclick = async (new_data) => {
+  onAdd = async (new_data) => {
     await this.setState(prevState => ({
       data: [...prevState.data, new_data]
     }))
@@ -29,6 +29,22 @@ class App extends Component {
       .indexOf(id);
     this.setState({ pet_id: index });
   }
+
+  onUpdate = (pet_data) => {
+    // console.log(pet_data);
+    let pet = [...this.state.data];
+    pet.map(pet_item => {
+      if (parseInt(pet_item.id) === parseInt(pet_data.id)) {
+        pet_item.type = pet_data.type;
+        pet_item.description = pet_data.description;
+        pet_item.skill_1 = pet_data.skill_1;
+        pet_item.skill_2 = pet_data.skill_2;
+        pet_item.skill_3 = pet_data.skill_3;
+      };
+
+    });
+    this.setState({ pet });
+  };
    
   render() {
     console.log(this.state.data);
@@ -36,8 +52,11 @@ class App extends Component {
       <Router>
         <Routes>
           <Route path="/" element={<Home data={this.state.data} getId={this.getId}/>}/>
-          <Route path="/add-pet" element={<Add_pet handleOnClick={this.onclick} setId={this.state.data.length}  />}/>
-          <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data} pet_id={this.state.pet_id} />}/>
+          <Route path="/add-pet" element={<Add_pet handleOnClick={this.onAdd} setId={this.state.data.length}  />}/>
+          <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data} 
+                                                     pet_id={this.state.pet_id} 
+                                                     onUpdate={this.onUpdate} />}
+                                                     />
         </Routes>
       </Router>
     );

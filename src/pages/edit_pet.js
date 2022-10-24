@@ -11,7 +11,7 @@ class Edit_pet extends Component {
         return (
             <React.Fragment>
                 <Navbar />
-                <Form pet_details={this.props} />
+                <Form pet_details={this.props} onUpdate={this.props.onUpdate} />
                 <Footer />
             </React.Fragment>
         );
