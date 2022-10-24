@@ -7,7 +7,9 @@ class Form extends Component {
     
     handleOnSubmit = (event) => {
         event.preventDefault();
+        
         let data_form = event.target;
+
         this.props.handleOnClick({
           id: this.props.setId+1,
           name: data_form.pet_name.value,
@@ -18,12 +20,14 @@ class Form extends Component {
           skill_3: data_form.pet_skill_3.value,
           likes: 0,
         });
+
         data_form.pet_name.value = "";
         data_form.pet_type.value = "";  
         data_form.pet_desc.value = "";
         data_form.pet_skill_1.value = "";
         data_form.pet_skill_2.value = "";
         data_form.pet_skill_3.value = "";
+        this.props.showToast();
     };
 
     render() { 

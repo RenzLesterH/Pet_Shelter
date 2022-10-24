@@ -6,7 +6,6 @@ import Form from "../components/edit_form";
 import Navbar from "../components/navbar_add_pet";
 
 class Edit_pet extends Component {
-    // state = {  } 
     render() {
         return (
             <React.Fragment>

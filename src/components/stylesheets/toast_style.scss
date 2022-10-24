@@ -1,0 +1,11 @@
+body .toast{
+    background-color: #F5C388;
+    border: 1px solid #F5C388;
+    color: white;
+    width: 160px;
+    .toast-body{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
