@@ -27,7 +27,6 @@ section#edit_pet{
                 border-radius: 4px;
                 border: none;
                 margin-bottom: 10px;   
-                padding: 9px 14px 8px 14px;
             }
             label{
                 color: #BDBDBD;
@@ -38,21 +37,26 @@ section#edit_pet{
             #pet_type_select{
                 margin-left: 64px;
                 width: 399px;
+                padding: 9px 14px 8px 14px;
             }
             
             #pet_desc_textarea{
                 height: 102px;
                 margin-left: 47px;
                 max-width: 371px;
-                min-width: 399px;
+                min-width: 399px; 
+                resize: none;
+                padding: 9px 14px 8px 14px;
             }
             #skill_1{
                 margin-left: 87px;
                 width: 399px;
+                padding: 10px 14px 9px 14px;
             }
             .pet_skills{
                 margin-left: 119px;
                 width: 399px;
+                padding: 10px 14px 9px 18px;
             }
         }
         button[type=submit]{
