@@ -26,17 +26,19 @@ class Form extends Component {
     // };
 
     render() {
-        let { pets_data } = this.props; 
+        let pets_data = this.props.pet_details.pet_details;
+        let pets_id = this.props.pet_details.pet_id;
         return (
             <section id="edit_pet">
                 <form method="post" onSubmit={this.handleOnSubmit}>
                     <div>
                         <label>Pet Name</label>
-                        <input id="pet_name_input" type="text" name="pet_name" required/>
+                        <input id="pet_name_input" type="text" name="pet_name" defaultValue={pets_data[pets_id].name} required/>
                     </div>
                     <div>
                        <label>Pet Type</label> 
-                        <select id="pet_type_select" name="pet_type" required>
+                        <select id="pet_type_select" name="pet_type" defaultValue={pets_data[pets_id].type
+} required>
                             <option>Pig</option>
                             <option>Dog</option>
                             <option>Cat</option>
@@ -44,13 +46,14 @@ class Form extends Component {
                     </div>
                     <div>
                         <label id="pet_desc_label">Description</label>
-                        <textarea name="pet_desc" id="pet_desc_textarea" required></textarea>
+                        <textarea name="pet_desc" id="pet_desc_textarea" required>{pets_data[pets_id].description}</textarea>
                     </div>
                     <div>
                         <label>Skills</label>
-                        <input type="text" name="pet_skill_1" id="skill_1" required />
-                        <input type="text" name="pet_skill_2" className="pet_skills" required />
-                        <input type="text" name="pet_skill_3" className="pet_skills" required />
+                        <input type="text" name="pet_skill_1" id="skill_1" defaultValue={pets_data[pets_id].skill_1} required />
+                        <input type="text" name="pet_skill_2" className="pet_skills" defaultValue={pets_data[pets_id].skill_2} required />
+                        <input type="text" name="pet_skill_3" className="pet_skills" defaultValue={pets_data[pets_id].skill_3
+} required />
                     </div>
                     <button type="submit"><i className="fas fa-upload"></i>Edit Pet</button>
                 </form>

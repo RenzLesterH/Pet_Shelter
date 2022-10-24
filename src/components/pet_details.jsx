@@ -20,7 +20,7 @@ class Pet_details extends Component {
                         <td className="pet_type" key={pets.type}>{pets.type}</td>
                         <td>
                             <Link to="#"><i className="fas fa-clipboard-list"></i>Details</Link>
-                            <Link to="/edit-pet"><i className="fas fa-pen-square"></i>Edit</Link>
+                            <Link to="/edit-pet" onClick={() => this.props.getId(pets.id)}><i className="fas fa-pen-square"></i>Edit</Link>
                         </td>
                     </tr>
                 ))}

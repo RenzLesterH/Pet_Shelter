@@ -17,7 +17,7 @@ class Home extends Component {
       <React.Fragment>
         <Navbar />
         <Banner/>
-        <Main pets_data={pets}/>
+        <Main pets_data={pets} getId={this.props.getId}/>
         <Footer />
       </React.Fragment>
     );

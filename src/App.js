@@ -12,23 +12,31 @@ class App extends Component {
     super(props);
 
     this.state = {
-      data: Records
+      data: Records,
+      pet_id: 0
     }
   }
 
-   onclick = async (new_data) => {
+  onclick = async (new_data) => {
     await this.setState(prevState => ({
       data: [...prevState.data, new_data]
     }))
-  } 
+  }
+  
+  getId = (id) => {
+    const index = this.state.data
+      .map((object) => object.id)
+      .indexOf(id);
+    this.setState({ pet_id: index });
+  }
    
   render() {
     return (
       <Router>
         <Routes>
-          <Route path="/" element={<Home data={this.state.data}/>}/>
+          <Route path="/" element={<Home data={this.state.data} getId={this.getId}/>}/>
           <Route path="/add-pet" element={<Add_pet handleOnClick={this.onclick} />}/>
-          <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data}/>}/>
+          <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data} pet_id={this.state.pet_id} />}/>
         </Routes>
       </Router>
     );
