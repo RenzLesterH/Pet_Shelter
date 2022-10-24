@@ -32,8 +32,21 @@ main {
                         font-size: 18px;
                         text-decoration: none;
 
-                        i {
-                            margin: 0px 15px 0px 35px;
+                        div{
+                            display: inline-block;
+                            margin: 0px 15px 3px 35px;
+                            vertical-align: middle;
+                        }
+
+                        div#details_icon {
+                            width: 18px; 
+                            height: 20px;
+                            background: url('../images/icons.png') -50px -10px;
+                        }
+                        div#edit_icon {
+                            width: 20px; 
+                            height: 20px;
+                            background: url('../images/icons.png') -10px -10px;
                         }
                     }
 
