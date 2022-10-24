@@ -24,15 +24,16 @@ class Pet_details extends Component {
     closeModal = () => this.setState({ isOpen: false });
 
     updateLike = (pet_id) => {
-        // console.log(pet_id);
         let pet = [...this.state.pets_data];
         pet.map(pet_item => {
         if (parseInt(pet_item.id) === parseInt(pet_id)) {
             pet_item.likes++;
+            this.props.getName(pet_item.name);
         };
 
         });
         this.setState({ pet });
+        this.props.showToast();
     };
 
     render() {
