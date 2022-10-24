@@ -43,17 +43,21 @@ class Pet_details extends Component {
                 <main>
                     <h3>These pets are looking for a good home</h3>
                     <table>
-                        {pets_data.map((pets) => (
-                            <tr>
-                                <td className="pet_name" key={pets.name}>{pets.name}</td>
-                                <td className="pet_type" key={pets.type}>{pets.type}</td>
-                                <td>
-                                    {/* change it later */}
-                                    <button onClick={() => this.openModal(pets.id)}><i className="fas fa-clipboard-list"></i>Details</button>
-                                    <Link to="/edit-pet" onClick={() => this.props.getId(pets.id)}><i className="fas fa-pen-square"></i>Edit</Link>
-                                </td>
-                            </tr>
-                        ))}
+                        <thead></thead>
+                        <tbody>
+                            {pets_data.map((pets) => (
+                                <tr>
+                                    <td className="pet_name" key={pets.name}>{pets.name}</td>
+                                    <td className="pet_type" key={pets.type}>{pets.type}</td>
+                                    <td>
+                                        {/* change it later */}
+                                        <button onClick={() => this.openModal(pets.id)}><i className="fas fa-clipboard-list"></i>Details</button>
+                                        <Link to="/edit-pet" onClick={() => this.props.getId(pets.id)}><i className="fas fa-pen-square"></i>Edit</Link>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                        <tfoot></tfoot>
                     </table>
                 </main>
 
@@ -63,18 +67,22 @@ class Pet_details extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <table id="pet_details_modal">
-                            <tr>
-                                <td className="pet_details_label">Pet Type</td>
-                                <td className="pet_details_value">{pets_data[pet_data_index].type}</td>
-                            </tr>
-                            <tr>
-                                <td className="pet_details_label">Description</td>
-                                <td className="pet_details_value">{pets_data[pet_data_index].description}</td>
-                            </tr>
-                            <tr>
-                                <td className="pet_details_label">Skills</td>
-                                <td className="pet_details_value">{pets_data[pet_data_index].skill_1}  •  {pets_data[pet_data_index].skill_2}  •  {pets_data[pet_data_index].skill_3}</td>
-                            </tr>
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td className="pet_details_label">Pet Type</td>
+                                    <td className="pet_details_value">{pets_data[pet_data_index].type}</td>
+                                </tr>
+                                <tr>
+                                    <td className="pet_details_label">Description</td>
+                                    <td className="pet_details_value">{pets_data[pet_data_index].description}</td>
+                                </tr>
+                                <tr>
+                                    <td className="pet_details_label">Skills</td>
+                                    <td className="pet_details_value">{pets_data[pet_data_index].skill_1}  •  {pets_data[pet_data_index].skill_2}  •  {pets_data[pet_data_index].skill_3}</td>
+                                </tr>
+                            </tbody>
+                            <tfoot></tfoot>
                         </table>
                     </Modal.Body>
                     <Modal.Footer>

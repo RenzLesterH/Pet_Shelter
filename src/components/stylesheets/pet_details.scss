@@ -15,39 +15,40 @@ main {
         border-spacing: 0 5px;
         font-size: 18px;
         width: 862px;
+        tbody{
+            tr {
+                background: #FFFFFF;
+                border-radius: 4px;
+                box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.05);
+                margin: 100px 0px;
 
-        tr {
-            background: #FFFFFF;
-            border-radius: 4px;
-            box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.05);
-            margin: 100px 0px;
+                td {
+                    padding: 17px 23px;
 
-            td {
-                padding: 17px 23px;
+                    a, button {
+                        background-color: transparent;
+                        border: none;
+                        color: #BDBDBD;
+                        font-size: 18px;
+                        text-decoration: none;
 
-                a, button {
-                    background-color: transparent;
-                    border: none;
-                    color: #BDBDBD;
-                    font-size: 18px;
-                    text-decoration: none;
+                        i {
+                            margin: 0px 15px 0px 35px;
+                        }
+                    }
 
-                    i {
-                        margin: 0px 15px 0px 35px;
+                    a:hover, button:hover {
+                        color: black;
                     }
                 }
 
-                a:hover, button:hover {
-                    color: black;
+                .pet_name {
+                    width: 370px;
                 }
-            }
 
-            .pet_name {
-                width: 370px;
-            }
-
-            .pet_type {
-                width: 211px;
+                .pet_type {
+                    width: 211px;
+                }
             }
         }
     }
@@ -64,19 +65,20 @@ main {
         table#pet_details_modal {
             font-family: header_font;
             width: 433px;
+            tbody{
+                tr {
+                    td {
+                        padding: 8px 0px 9px 0px;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 21px;
+                    }
 
-            tr {
-                td {
-                    padding: 8px 0px 9px 0px;
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 21px;
-                }
-
-                td.pet_details_label {
-                    color: #BDBDBD;
-                    width: 120px;
+                    td.pet_details_label {
+                        color: #BDBDBD;
+                        width: 120px;
+                    }
                 }
             }
         }
