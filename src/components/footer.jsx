@@ -8,7 +8,7 @@ class Footer extends Component {
     render() { 
         return (
             <footer>
-                <p>Ⓒ2020. <a href="#">V88Studios.</a> All Rights Reserved</p>
+                <p>&#9400;2020. <a href="#">V88Studios.</a> All Rights Reserved</p>
             </footer>
         );
     }

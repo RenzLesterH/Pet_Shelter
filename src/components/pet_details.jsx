@@ -79,7 +79,7 @@ class Pet_details extends Component {
                                 </tr>
                                 <tr>
                                     <td className="pet_details_label">Skills</td>
-                                    <td className="pet_details_value">{pets_data[pet_data_index].skill_1}  •  {pets_data[pet_data_index].skill_2}  •  {pets_data[pet_data_index].skill_3}</td>
+                                    <td className="pet_details_value">{pets_data[pet_data_index].skill_1}  &bull;  {pets_data[pet_data_index].skill_2}  &bull;  {pets_data[pet_data_index].skill_3}</td>
                                 </tr>
                             </tbody>
                             <tfoot></tfoot>
