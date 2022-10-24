@@ -50,7 +50,6 @@ class Pet_details extends Component {
                                     <td className="pet_name" key={pets.name}>{pets.name}</td>
                                     <td className="pet_type" key={pets.type}>{pets.type}</td>
                                     <td>
-                                        {/* change it later */}
                                         <button onClick={() => this.openModal(pets.id)}><i className="fas fa-clipboard-list"></i>Details</button>
                                         <Link to="/edit-pet" onClick={() => this.props.getId(pets.id)}><i className="fas fa-pen-square"></i>Edit</Link>
                                     </td>
