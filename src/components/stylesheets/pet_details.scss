@@ -31,6 +31,7 @@ main {
                     color: #BDBDBD;
                     font-size: 18px;
                     text-decoration: none;
+
                     i {
                         margin: 0px 15px 0px 35px;
                     }
@@ -47,6 +48,65 @@ main {
 
             .pet_type {
                 width: 211px;
+            }
+        }
+    }
+}
+
+.modal-content {
+    padding: 0px 3px;
+    // .modal-header {
+
+    // }
+    .modal-body {
+        padding-top: 0px;
+        padding-bottom: 21px;
+        table#pet_details_modal {
+            font-family: header_font;
+            width: 433px;
+
+            tr {
+                td {
+                    padding: 8px 0px 9px 0px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+
+                td.pet_details_label {
+                    color: #BDBDBD;
+                    width: 120px;
+                }
+            }
+        }
+    }
+    .modal-footer {
+        padding: 20px 16px;
+        background-color: #F2F2F2;
+        border-top: none;
+        h4{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: #BDBDBD;
+        }
+        h4, button{
+            margin: 0px 13px
+        }
+        button#like_button{
+            background-color: #F5C388;
+            border: 1px solid #F5C388;
+            i{
+                margin-right: 10px;
+            }
+        }
+        button#adopt_button{
+            background-color: #FF5C4C;
+            border: 1px solid #FF5C4C;
+            i{
+                margin-right: 10px;
             }
         }
     }
