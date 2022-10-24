@@ -4,10 +4,10 @@
 }
 
 * {
-    // outline: 1px solid black;
-    padding: 0px;
-    margin: 0px;
     font-family: header_font;
+    margin: 0px;
+    // outline: 1px solid black;
+    padding: 0px; 
 }
 
 body {
@@ -15,6 +15,6 @@ body {
 }
 
 header, section, main, footer{
-    width: 862px;
     margin: 0px auto;
+    width: 862px;
 }

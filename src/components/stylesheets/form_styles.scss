@@ -1,27 +1,26 @@
 section#add_pet{
     margin: 0px auto 60px auto;
     form{
-        width: 519px;
-        margin: auto;
+        background: #FFFFFF;
+        border-radius: 4px;
+        box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.05);
         font-size: 14px;
         font-weight: 400;
-        line-height: 21px;
         letter-spacing: 0em;
+        line-height: 21px;
+        margin: auto;
         padding: 24px 23px;
-        background: #FFFFFF;
-        box-shadow: 0px 8px 40px rgba(34, 69, 82, 0.05);
-        border-radius: 4px;
+        width: 565px;
         div{
             .pet_form_inputs{
                 margin-left: 200px;
             }
             input[type=text], select, textarea{ 
-                padding: 9px 14px;
                 background-color: #F2F2F2;
                 border-radius: 4px;
                 border: none;
-                margin-bottom: 10px;
-                
+                margin-bottom: 10px;   
+                padding: 9px 14px 8px 14px;
             }
             label{
                 color: #BDBDBD;
@@ -31,7 +30,7 @@ section#add_pet{
             }
             #pet_name_input{
                 margin-left: 57px;
-                width: 371px;            
+                width: 399px;            
             }
             #pet_type_select{
                 margin-left: 64px;
@@ -39,30 +38,30 @@ section#add_pet{
             }
             
             #pet_desc_textarea{
+                height: 102px;
                 margin-left: 47px;
-                min-width: 371px;
                 max-width: 371px;
-                height: 84px;
+                min-width: 399px;
             }
             #skill_1{
                 margin-left: 87px;
-                width: 371px;
+                width: 399px;
             }
             .pet_skills{
                 margin-left: 119px;
-                width: 371px;
+                width: 399px;
             }
         }
         button[type=submit]{
             background-color: #FF5C4C;
+            border-radius: 5px;
+            border: none;
             color: white;
             padding: 7px 11px;
-            border: none;
-            border-radius: 5px;
             i{
                 margin-right: 10px;
             }
-            margin: 31px 0px 0px 424px;
+            margin: 31px 0px 0px 421px;
         }  
     }
 }

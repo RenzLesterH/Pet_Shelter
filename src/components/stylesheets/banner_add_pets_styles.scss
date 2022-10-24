@@ -5,13 +5,12 @@
 }
 section#add_pet_shelter_banner {
     margin: 40px auto 53px auto;
-
     div#add_pet_shelter_banner_moto {
         display: inline-block;
         margin-right: 15px;
-        padding: 40px 0px 0px 15px;
+        padding: 40px 0px 21px 15px;
         vertical-align: top;
-        width: 364px;
+        width: 379px;
         h1 {
             font-family: banner_font;
             font-size: 48px;
@@ -21,12 +20,10 @@ section#add_pet_shelter_banner {
             span:first-child {
                 color: #FF5C4C;
             }
-
             span {
                 color: #BDBDBD;
             }
         }
-
         h5 {
             color: #BDBDBD;
             font-size: 14px;
