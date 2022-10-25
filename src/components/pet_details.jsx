@@ -7,6 +7,10 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 class Pet_details extends Component {
+    /*
+		DOCU: The state pet_data_index temporary default value is 0, because it is the index of the destructor 
+        pets_data in viewing the details of an specific pet.   
+	*/
     state = {
         pets_data: this.props.pets_data,
         isOpen: false,
