@@ -21,9 +21,15 @@ class Form extends Component {
     }
     
     handleOnSubmit = (event) => {
-        event.preventDefault();;
+        event.preventDefault();
         this.props.handleOnClick(this.state.pet_details);
         event.target.reset();
+        this.setState({
+          pet_details: {
+            ...this.state.pet_details,
+            id: this.state.pet_details.id+1,
+          },
+        })
         this.props.showToast();
     };
 
