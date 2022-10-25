@@ -13,24 +13,40 @@ class Pet_details extends Component {
         pet_data_index: 0
     }
 
-    openModal = (pet_id) => {
+    /** 
+    *   DOCU: This will view a specific pets info in a modal by returning first the id of an pet, get it's index and use the index to set the state pet_data_index. <br>
+    *   This is triggered in this component by onClick event from line 60 <br>
+    *   Last updated at: October 24, 2022
+    *   @param {number} pets_id has the id of the pet and it is use to find the index of this pet.
+    *   @author Renz Lester
+    */
+    openModal = (pets_id) => {
         this.setState({ isOpen: true })
-        const index = this.state.pets_data
-            .map((object) => object.id)
-            .indexOf(pet_id);
-        this.setState({ pet_data_index: index });
+        const pet_index = this.state.pets_data
+            .map((pet) => pet.id)
+            .indexOf(pets_id);
+        this.setState({ pet_data_index: pet_index });
     };
 
     closeModal = () => this.setState({ isOpen: false });
 
+    /** 
+    *   DOCU: This method will increment the number of likes of an specific pet. <br>
+    *   This is triggered in this component by an onClick event from line 130 <br>
+    *   Last updated at: October 24, 2022
+    *   @param {number} pets_id has the id of the pet and it is use to update the number of likes of a pet.
+    *   @author Renz Lester
+    */
     updateLike = (pet_id) => {
+        /* This will find the id of the pet and increment it's current value when it matches */
         let pet = [...this.state.pets_data];
         pet.map(pet_item => {
-        if (parseInt(pet_item.id) === parseInt(pet_id)) {
-            pet_item.likes++;
-            this.props.getName(pet_item.name);
-        };
-
+            if (parseInt(pet_item.id) === parseInt(pet_id)) {
+                pet_item.likes++;
+                 /* Props method getName is also invoke here to give the name of the pet for the toast message.
+                 *  It will be used in the getName method in home.jsx pages. */
+                this.props.getName(pet_item.name);
+            };
         });
         this.setState({ pet });
         this.props.showToast();

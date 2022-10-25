@@ -14,10 +14,19 @@ class Home extends Component {
 		liked: null
 	}
 
+	 /* this method set the state toast_show into true*/
 	showToast = () => {
 		this.setState({ toast_show: true })
 	}
 
+	/** 
+    *   DOCU: This method returns the name of the pet and set it in the state liked with a concatination. <br>
+	* 	This will then be use for the toast message. <br>
+    *   This is triggered in the notif_toast component from line 48. <br>
+    *   Last updated at: October 24, 2022
+    *   @param {string} name_liked has the name of the pet and it is concatinate with "Likes" string, and set it in the state liked.
+    *   @author Renz Lester
+    */
 	getName = (name_liked) => {
 		this.setState({ liked: "Likes " + name_liked });
 	}

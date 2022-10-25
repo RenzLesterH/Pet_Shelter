@@ -18,7 +18,11 @@ class Edit_pet extends Component {
         return (
             <React.Fragment>
                 <Navbar />
-                <Form pet_details={this.props.pet_details} pet_id={this.props.pet_id} onUpdate={this.props.onUpdate} showToast={this.showToast} />
+                <Form 
+                    pet_details={this.props.pet_details} 
+                    pet_index={this.props.pet_id} 
+                    onUpdate={this.props.onUpdate} 
+                    showToast={this.showToast} />
                 <NotificationToast
                     showToast={this.state.toast_show}
                     hideToast={() => this.setState({ toast_show: false })}

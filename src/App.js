@@ -35,21 +35,22 @@ class App extends Component {
     *   DOCU: This method returns an id of an pet, get it's index and use the index to set the state pet_id. <br>
     *   This is triggered in the pet_details component by a onClick from line 54 <br>
     *   Last updated at: October 24, 2022
-    *   @param {number} id has the id of the pet and it is use to find the index of this pet id.
+    *   @param {number} pets_id has the id of the pet and it is use to find the index of this pet.
     *   @author Renz Lester
     */
-    getId = (id) => {
-        const index = this.state.data
-            .map((object) => object.id)
-            .indexOf(id);
-        this.setState({ pet_id: index });
+    getId = (pets_id) => {
+        /* pet_index variable value comes from the index of the pet_id parameter fetched in the indexOf method*/
+        const pet_index = this.state.data
+            .map((pet) => pet.id)
+            .indexOf(pets_id);
+        this.setState({ pet_id: pet_index });
     }
 
     /** 
-    *   DOCU: This method updates the specific pet by its id in the state data. <br>
-    *   This is triggered in the edit_form component by a onSubmit from line 32 and trigger the function handleOnSubmit from line 26<br>
+    *   DOCU: This method updates the specific pet information in the state data by its id. <br>
+    *   This is triggered in the edit_form component by a onSubmit from line 32 and trigger the function handleOnSubmit from line 31-35<br>
     *   Last updated at: October 24, 2022
-    *   @param {object} id has the id of the pet and it is use to find the index of this pet id.
+    *   @param {object} pet_data is a set of array object of the updated pet information.
     *   @author Renz Lester
     */
     onUpdate = (pet_data) => {

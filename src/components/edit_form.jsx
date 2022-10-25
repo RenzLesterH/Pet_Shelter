@@ -5,20 +5,34 @@ import './stylesheets/edit_form_styles.scss';
 class Form extends Component {
     constructor(props) {
         super(props);
-    
+
+        /*
+          DOCU: The value of this state pet_details data represents to a specific pet. This is set by using 
+          this.props.pet.details and it's index is identified using this.props.pet_index. This will change if 
+          onchange event is triggered and executed the method setPetValue.     
+        */
         this.state = {
             pet_details: {
-                id: this.props.pet_details[this.props.pet_id].id,
-                name: this.props.pet_details[this.props.pet_id].name,
-                type: this.props.pet_details[this.props.pet_id].type,
-                description: this.props.pet_details[this.props.pet_id].description,
-                skill_1: this.props.pet_details[this.props.pet_id].skill_1,
-                skill_2: this.props.pet_details[this.props.pet_id].skill_2,
-                skill_3: this.props.pet_details[this.props.pet_id].skill_3,
+                id: this.props.pet_details[this.props.pet_index].id,
+                name: this.props.pet_details[this.props.pet_index].name,
+                type: this.props.pet_details[this.props.pet_index].type,
+                description: this.props.pet_details[this.props.pet_index].description,
+                skill_1: this.props.pet_details[this.props.pet_index].skill_1,
+                skill_2: this.props.pet_details[this.props.pet_index].skill_2,
+                skill_3: this.props.pet_details[this.props.pet_index].skill_3,
             }
         }
     }
 
+  /** 
+	*   DOCU: This method will set the updated value of the state pet_details base on it's key. <br>
+	*   This is triggered by the event onChange in line 69, 83, 94, 102, 110<br>
+	*   Last updated at: October 24, 2022
+	*   @param {string} pet_value is required to pass the value of an input form to the key of an object pet_details in state.
+	*   @param {object key} pet_key represents a key in the object pet_details in state. It is use to set the pet_value into a 
+	*   key in the object pet_details in state.
+	*   @author Renz Lester
+	*/
     setPetValue = (pet_value, pet_key) => {
       this.setState({
         pet_details: {
@@ -28,6 +42,12 @@ class Form extends Component {
       })
     }
 
+  /** 
+	*   DOCU: This method will execute the props funtion onUpdate to pass the updated state of pet_details. <br>
+	*   This is triggered by the event onSubmit in line 61. <br>
+	*   Last updated at: October 24, 2022
+	*   @author Renz Lester
+	*/
     handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.onUpdate(this.state.pet_details);
