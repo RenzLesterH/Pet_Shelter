@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 /* Components */
-import Banner from "../components/banners_add_pet";
-import Footer from "../components/footer";
-import Form from "../components/form";
-import Navbar from "../components/navbar_add_pet";
-import NotificationToast from "../components/notif_toast";
+import Banner from                  "../components/banners_add_pet";
+import Footer from                  "../components/footer";
+import Form from                    "../components/form";
+import Navbar from                  "../components/navbar_add_pet";
+import NotificationToast from       "../components/notif_toast";
 
 class Add_pet extends Component {
     state = {

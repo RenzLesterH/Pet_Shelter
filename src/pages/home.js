@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
 /* Components */
-import Banner from "../components/banners";
-import Footer from "../components/footer";
-import Main from "../components/pet_details";
-import Navbar from "../components/navbar";
-import NotificationToast from "../components/notif_toast";
+import Banner from 					"../components/banners";
+import Footer from 					"../components/footer";
+import Main from 					"../components/pet_details";
+import Navbar from 					"../components/navbar";
+import NotificationToast from 		"../components/notif_toast";
 
 class Home extends Component {
 	state = {

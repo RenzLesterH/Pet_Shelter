@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 /* Pages and Json file. */
-import AddPet from "./pages/add_pet";
-import EditPet from "./pages/edit_pet";
-import Home from "./pages/home";
-import Records from "./pet_info.json";
+import AddPet from      "./pages/add_pet";
+import EditPet from     "./pages/edit_pet";
+import Home from        "./pages/home";
+import Records from     "./pet_info.json";
 
 class App extends Component {
 

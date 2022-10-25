@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './stylesheets/styles.scss';
-import './stylesheets/edit_form_styles.scss';
+
+import    './stylesheets/styles.scss';
+import    './stylesheets/edit_form_styles.scss';
 
 class Form extends Component {
     constructor(props) {

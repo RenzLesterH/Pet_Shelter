@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './stylesheets/styles.scss';
-import './stylesheets/banner_add_pets_styles.scss';
-import Pet_banner from './images/add_pet_banner.png';
+import                      './stylesheets/styles.scss';
+import                      './stylesheets/banner_add_pets_styles.scss';
+import Pet_banner from      './images/add_pet_banner.png';
 
 class Banners extends Component {
     // state = {  } 
