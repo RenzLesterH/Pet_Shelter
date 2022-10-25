@@ -9,7 +9,7 @@ import NotificationToast from "../components/notif_toast";
 
 class Home extends Component {
 	state = {
-		pets: this.props.data,
+		pets: this.props.pet_data,
 		toast_show: false,
 		liked: null
 	}
@@ -27,8 +27,8 @@ class Home extends Component {
     *   @param {string} name_liked has the name of the pet and it is concatinate with "Likes" string, and set it in the state liked.
     *   @author Renz Lester
     */
-	getName = (name_liked) => {
-		this.setState({ liked: "Likes " + name_liked });
+	getPetName = (pet_name) => {
+		this.setState({liked: "Likes " + pet_name});
 	}
 
 	render() {
@@ -37,10 +37,11 @@ class Home extends Component {
 			<React.Fragment>
 				<Navbar />
 				<Banner />
-				<Main pets_data={pets}
-					getId={this.props.getId}
+				<Main 
+					pets_data={pets}
+					getPetId={this.props.getPetId}
 					showToast={this.showToast}
-					getName={this.getName} />
+					getPetName={this.getPetName} />
 				<NotificationToast
 					showToast={this.state.toast_show}
 					hideToast={() => this.setState({ toast_show: false })}

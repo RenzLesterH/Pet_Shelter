@@ -22,8 +22,8 @@ class Add_pet extends Component {
                 <Navbar />
                 <Banner />
                 <Form 
-                    handleOnAdd={this.props.handleOnClick}
-                    setId={this.props.setId}
+                    handleOnAdd={this.props.handleOnAdd}
+                    setPetId={this.props.setPetId}
                     showToast={this.showToast} />
                 <NotificationToast
                     showToast={this.state.toast_show}

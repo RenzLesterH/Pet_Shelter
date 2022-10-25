@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 /* Pages and Json file. */
-import Add_pet from "./pages/add_pet";
-import Edit_pet from "./pages/edit_pet";
+import AddPet from "./pages/add_pet";
+import EditPet from "./pages/edit_pet";
 import Home from "./pages/home";
 import Records from "./pet_info.json";
 
@@ -25,7 +25,7 @@ class App extends Component {
     *   @param {object} new_data passes a set of array object of an new pet to add in the state data.
     *   @author Renz Lester
     */
-    onAdd = async (new_data) => {
+     handleOnAdd = async (new_data) => {
         await this.setState(prevState => ({
             data: [...prevState.data, new_data]
         }))
@@ -38,7 +38,7 @@ class App extends Component {
     *   @param {number} pets_id has the id of the pet and it is use to find the index of this pet.
     *   @author Renz Lester
     */
-    getId = (pets_id) => {
+    getPetId = (pets_id) => {
         /* pet_index variable value comes from the index of the pet_id parameter fetched in the indexOf method*/
         const pet_index = this.state.data
             .map((pet) => pet.id)
@@ -53,7 +53,7 @@ class App extends Component {
     *   @param {object} pet_data is a set of array object of the updated pet information.
     *   @author Renz Lester
     */
-    onUpdate = (pet_data) => {
+    handleOnUpdate = (pet_data) => {
         let pet = [...this.state.data];
         pet.map(pet_item => {
             if (parseInt(pet_item.id) === parseInt(pet_data.id)) {
@@ -72,11 +72,9 @@ class App extends Component {
         return (
             <Router>
                 <Routes>
-                    <Route path="/" element={<Home data={this.state.data} getId={this.getId} />} />
-                    <Route path="/add-pet" element={<Add_pet handleOnClick={this.onAdd} setId={this.state.data.length} />} />
-                    <Route path="/edit-pet" element={<Edit_pet pet_details={this.state.data}
-                        pet_id={this.state.pet_id}
-                        onUpdate={this.onUpdate} />}
+                    <Route path="/" element={<Home pet_data={this.state.data} getPetId={this.getPetId} />} />
+                    <Route path="/add-pet" element={<AddPet handleOnAdd={this.handleOnAdd} setPetId={this.state.data.length} />} />
+                    <Route path="/edit-pet" element={<EditPet pet_details={this.state.data} pet_id={this.state.pet_id} handleOnUpdate={this.handleOnUpdate} />}
                     />
                 </Routes>
             </Router>

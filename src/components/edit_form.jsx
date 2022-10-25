@@ -43,14 +43,14 @@ class Form extends Component {
     }
 
   /** 
-	*   DOCU: This method will execute the props funtion onUpdate to pass the updated state of pet_details. <br>
+	*   DOCU: This method will execute the props funtion handleOnUpdate to pass the updated state of pet_details. <br>
 	*   This is triggered by the event onSubmit in line 61. <br>
-	*   Last updated at: October 24, 2022
+	*   Last updated at: October 24, 2022 
 	*   @author Renz Lester
 	*/
     handleOnSubmit = (event) => {
         event.preventDefault();
-        this.props.onUpdate(this.state.pet_details);
+        this.props.handleOnUpdate(this.state.pet_details);
         this.props.showToast();
     };
 

@@ -13,7 +13,7 @@ class Form extends Component {
 		*/
 		this.state = {
 			pet_details: {
-				id: this.props.setId + 1,
+				id: this.props.setPetId + 1,
 				name: null,
 				type: "Pig",
 				description: null,

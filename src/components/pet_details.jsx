@@ -43,9 +43,9 @@ class Pet_details extends Component {
         pet.map(pet_item => {
             if (parseInt(pet_item.id) === parseInt(pet_id)) {
                 pet_item.likes++;
-                 /* Props method getName is also invoke here to give the name of the pet for the toast message.
-                 *  It will be used in the getName method in home.jsx pages. */
-                this.props.getName(pet_item.name);
+                 /* Props method getPetName is also invoke here to give the name of the pet for the toast message.
+                 *  It will be used in the getPetName method in home.jsx pages. */
+                this.props.getPetName(pet_item.name);
             };
         });
         this.setState({ pet });
@@ -67,7 +67,7 @@ class Pet_details extends Component {
                                     <td className="pet_type" key={pets.type}>{pets.type}</td>
                                     <td>
                                         <button onClick={() => this.openModal(pets.id)}> <div id="details_icon"></div>Details</button>
-                                        <Link to="/edit-pet" onClick={() => this.props.getId(pets.id)}><div id="edit_icon"></div>Edit</Link>
+                                        <Link to="/edit-pet" onClick={() => this.props.getPetId(pets.id)}><div id="edit_icon"></div>Edit</Link>
                                     </td>
                                 </tr>
                             ))}

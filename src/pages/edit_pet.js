@@ -21,7 +21,7 @@ class Edit_pet extends Component {
                 <Form 
                     pet_details={this.props.pet_details} 
                     pet_index={this.props.pet_id} 
-                    onUpdate={this.props.onUpdate} 
+                    handleOnUpdate={this.props.handleOnUpdate} 
                     showToast={this.showToast} />
                 <NotificationToast
                     showToast={this.state.toast_show}
