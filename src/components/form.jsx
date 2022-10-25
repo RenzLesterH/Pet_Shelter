@@ -19,6 +19,15 @@ class Form extends Component {
             }
         }
     }
+
+	setPetValue = (pet_value, pet_key) => {
+		this.setState({
+		  pet_details: {
+			...this.state.pet_details,
+			[pet_key]: pet_value,
+		  },
+		})
+	}
     
     handleOnSubmit = (event) => {
         event.preventDefault();
@@ -33,7 +42,8 @@ class Form extends Component {
         this.props.showToast();
     };
 
-    render() { 
+    render() {
+		let pets = this.state.pet_details; 
         return (
           <section id="add_pet">
             <form method="post" onSubmit={this.handleOnSubmit}>
@@ -43,14 +53,7 @@ class Form extends Component {
                   id="pet_name_input"
                   type="text"
                   name="pet_name"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        name: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[1])}
                   required
                 />
               </div>
@@ -59,14 +62,7 @@ class Form extends Component {
                 <select
                   id="pet_type_select"
                   name="pet_type"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        type: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[2])}
                   required
                 >
                   <option>Pig</option>
@@ -79,14 +75,7 @@ class Form extends Component {
                 <textarea
                   name="pet_desc"
                   id="pet_desc_textarea"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        description: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[3])}
                   required
                 >
                   {" "}
@@ -98,42 +87,21 @@ class Form extends Component {
                   type="text"
                   name="pet_skill_1"
                   id="skill_1"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        skill_1: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[4])}
                   required
                 />
                 <input
                   type="text"
                   name="pet_skill_2"
                   className="pet_skills"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        skill_2: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[5])}
                   required
                 />
                 <input
                   type="text"
                   name="pet_skill_3"
                   className="pet_skills"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        skill_3: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[6])}
                   required
                 />
               </div>

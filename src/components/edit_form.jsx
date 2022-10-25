@@ -19,6 +19,15 @@ class Form extends Component {
         }
     }
 
+    setPetValue = (pet_value, pet_key) => {
+      this.setState({
+        pet_details: {
+          ...this.state.pet_details,
+          [pet_key]: pet_value,
+        },
+      })
+    }
+
     handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.onUpdate(this.state.pet_details);
@@ -37,14 +46,7 @@ class Form extends Component {
                 <select
                   id="pet_type_select"
                   name="pet_type"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        type: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[2] )}
                   defaultValue={pets.type}
                   required
                 >
@@ -58,14 +60,7 @@ class Form extends Component {
                 <textarea
                   name="pet_desc"
                   id="pet_desc_textarea"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        description: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[3])}
                   defaultValue={pets.description}
                   required
                 ></textarea>
@@ -76,14 +71,7 @@ class Form extends Component {
                   type="text"
                   name="pet_skill_1"
                   id="skill_1"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        skill_1: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[4])}
                   defaultValue={pets.skill_1}
                   required
                 />
@@ -91,14 +79,7 @@ class Form extends Component {
                   type="text"
                   name="pet_skill_2"
                   className="pet_skills"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        skill_2: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[5])}
                   defaultValue={pets.skill_2}
                   required
                 />
@@ -106,14 +87,7 @@ class Form extends Component {
                   type="text"
                   name="pet_skill_3"
                   className="pet_skills"
-                  onChange={(event) =>
-                    this.setState({
-                      pet_details: {
-                        ...this.state.pet_details,
-                        skill_3: event.target.value,
-                      },
-                    })
-                  }
+                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[6])}
                   defaultValue={pets.skill_3}
                   required
                 />

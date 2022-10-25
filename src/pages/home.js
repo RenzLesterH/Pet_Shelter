@@ -15,11 +15,11 @@ class Home extends Component {
 	}
 
 	showToast = () => {
-        this.setState({ toast_show: true })
-    }
+		this.setState({ toast_show: true })
+	}
 
 	getName = (name_liked) => {
-		this.setState({ liked: "Likes "+name_liked });
+		this.setState({ liked: "Likes " + name_liked });
 	}
 
 	render() {
@@ -28,12 +28,15 @@ class Home extends Component {
 			<React.Fragment>
 				<Navbar />
 				<Banner />
-				<Main pets_data={pets} getId={this.props.getId} showToast={this.showToast}  getName={this.getName}/>
+				<Main pets_data={pets}
+					getId={this.props.getId}
+					showToast={this.showToast}
+					getName={this.getName} />
 				<NotificationToast
-                    showToast={this.state.toast_show}
-                    hideToast={() => this.setState({ toast_show: false })}
-                    message= {this.state.liked}
-                />
+					showToast={this.state.toast_show}
+					hideToast={() => this.setState({ toast_show: false })}
+					message={this.state.liked}
+				/>
 				<Footer />
 			</React.Fragment>
 		);
