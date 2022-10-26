@@ -67,8 +67,6 @@ class App extends Component {
     };
 
     render() {
-        console.log(this.state.active_pet_details);
-
         return (
             <Router>
                 <Routes>

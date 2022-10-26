@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import                  './stylesheets/pet_details.scss';
-import                  './stylesheets/styles.scss';
+import                  "./stylesheets/pet_details.scss";
+import                  "./stylesheets/styles.scss";
 import Button from      "react-bootstrap/Button";
 import Modal from       "react-bootstrap/Modal";
 

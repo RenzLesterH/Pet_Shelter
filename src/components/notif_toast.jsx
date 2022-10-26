@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { ToastContainer } from 'react-bootstrap';
+import React, { Component } from "react";
+import { ToastContainer } from "react-bootstrap";
 
-import Toast from       'react-bootstrap/Toast';
-import                  './stylesheets/toast_style.scss';
+import Toast from       "react-bootstrap/Toast";
+import                  "./stylesheets/toast_style.scss";
 
 class NotifToast extends Component {
     render() {
