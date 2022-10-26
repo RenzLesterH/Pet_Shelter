@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 
-import    "./stylesheets/styles.scss";
-import    "./stylesheets/edit_form_styles.scss";
+import  "./stylesheets/styles.scss";
+import  "./stylesheets/edit_form_styles.scss";
 
 class Form extends Component {
     constructor(props) {
         super(props);
-        /*
-          DOCU: The value of this state pet_details data represents to a specific pet, that was set
-          by the props.active_pet_details.     
-        */
+
         this.state = {
             pet_details: props.active_pet_details
         }

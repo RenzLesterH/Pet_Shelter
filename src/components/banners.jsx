@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 
-import                      "./stylesheets/styles.scss";
-import                      "./stylesheets/banner_styles.scss";
+import  "./stylesheets/styles.scss";
+import  "./stylesheets/banner_styles.scss";
 import Pet_banner from      "./images/banner.png";
 
 class Banners extends Component {
-    // state = {  } 
     render() { 
         return (
             <section id="pet_shelter_banner">

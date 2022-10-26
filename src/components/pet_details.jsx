@@ -1,20 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import                  "./stylesheets/pet_details.scss";
-import                  "./stylesheets/styles.scss";
+import  "./stylesheets/pet_details.scss";
+import  "./stylesheets/styles.scss";
 import Button from      "react-bootstrap/Button";
 import Modal from       "react-bootstrap/Modal";
 
-class Pet_details extends Component {
+class PetDetails extends Component {
     /*
 		DOCU: The state pet_data_index temporary default value is 0, because it is the index of the destructor 
         pets_data in viewing the details of an specific pet.   
 	*/
-    state = {
-        pets_data: this.props.pets_data,
-        isOpen: false,
-        pet_data_index: 0
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            pets_data: props.pets_data,
+            isOpen: false,
+            pet_data_index: 0
+        }
     }
 
     /** 
@@ -115,4 +119,4 @@ class Pet_details extends Component {
     }
 }
 
-export default Pet_details;
+export default PetDetails;

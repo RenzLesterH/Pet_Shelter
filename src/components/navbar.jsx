@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import  {Link} from "react-router-dom";
 
-import      "./stylesheets/styles.scss";
-import      "./stylesheets/navbar_styles.scss";
+import  "./stylesheets/styles.scss";
+import  "./stylesheets/navbar_styles.scss";
 
 class Navbar extends Component {
-    // state = {  } 
     render() { 
         return (
             <React.Fragment>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import 		"./stylesheets/styles.scss";
-import 		"./stylesheets/form_styles.scss";
+import	"./stylesheets/styles.scss";
+import	"./stylesheets/form_styles.scss";
 
 class Form extends Component {
 	constructor(props) {
@@ -101,7 +101,6 @@ class Form extends Component {
 							onChange={(event) => this.setPetValue(event.target)}
 							required
 						>
-							{" "}
 						</textarea>
 					</div>
 					<div>
