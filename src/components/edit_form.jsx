@@ -69,7 +69,7 @@ class Form extends Component {
               <div>
                 <label id="pet_desc_label">Description</label>
                 <textarea
-                  name="desc"
+                  name="description"
                   id="pet_desc_textarea"
                   onChange={(event) => this.setPetValue(event.target)}
                   defaultValue={pets.description}
