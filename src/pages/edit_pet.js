@@ -19,8 +19,7 @@ class Edit_pet extends Component {
             <React.Fragment>
                 <Navbar />
                 <Form 
-                    pet_details={this.props.pet_details} 
-                    pet_index={this.props.pet_id} 
+                    active_pet_details={this.props.active_pet_details}
                     handleOnUpdate={this.props.handleOnUpdate} 
                     showToast={this.showToast} />
                 <NotificationToast

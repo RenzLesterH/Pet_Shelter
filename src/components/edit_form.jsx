@@ -6,46 +6,36 @@ import    './stylesheets/edit_form_styles.scss';
 class Form extends Component {
     constructor(props) {
         super(props);
-
         /*
-          DOCU: The value of this state pet_details data represents to a specific pet. This is set by using 
-          this.props.pet.details and it's index is identified using this.props.pet_index. This will change if 
-          onchange event is triggered and executed the method setPetValue.     
+          DOCU: The value of this state pet_details data represents to a specific pet, that was set
+          by the props.active_pet_details.     
         */
         this.state = {
-            pet_details: {
-                id: this.props.pet_details[this.props.pet_index].id,
-                name: this.props.pet_details[this.props.pet_index].name,
-                type: this.props.pet_details[this.props.pet_index].type,
-                description: this.props.pet_details[this.props.pet_index].description,
-                skill_1: this.props.pet_details[this.props.pet_index].skill_1,
-                skill_2: this.props.pet_details[this.props.pet_index].skill_2,
-                skill_3: this.props.pet_details[this.props.pet_index].skill_3,
-            }
+            pet_details: props.active_pet_details
         }
     }
 
   /** 
 	*   DOCU: This method will set the updated value of the state pet_details base on it's key. <br>
-	*   This is triggered by the event onChange in line 69, 83, 94, 102, 110<br>
-	*   Last updated at: October 24, 2022
-	*   @param {string} pet_value is required to pass the value of an input form to the key of an object pet_details in state.
-	*   @param {object key} pet_key represents a key in the object pet_details in state. It is use to set the pet_value into a 
+	*   This is triggered by the event onChange in line 60, 74, 85, 93, 101. <br>
+	*   Last updated at: October 26, 2022
+	*   @param {string} pet_value is required to access event.target and get the value and key by pet_value.value and pet_value.name. 
+	*	  The pet_value.name represents a key in the object pet_details in state. It is use to set the pet_value.value into a 
 	*   key in the object pet_details in state.
 	*   @author Renz Lester
 	*/
-    setPetValue = (pet_value, pet_key) => {
+    setPetValue = (pet_value) => {
       this.setState({
         pet_details: {
           ...this.state.pet_details,
-          [pet_key]: pet_value,
+          [pet_value.name]: pet_value.value,
         },
       })
     }
 
   /** 
 	*   DOCU: This method will execute the props funtion handleOnUpdate to pass the updated state of pet_details. <br>
-	*   This is triggered by the event onSubmit in line 61. <br>
+	*   This is triggered by the event onSubmit in line 52. <br>
 	*   Last updated at: October 24, 2022 
 	*   @author Renz Lester
 	*/
@@ -61,13 +51,13 @@ class Form extends Component {
           <section id="edit_pet">
             <form method="post" onSubmit={this.handleOnSubmit}>
               <h5>Edit Details: {pets.name}</h5>
-              <input type="hidden" name="pet_id" defaultValue={pets.id} />
+              <input type="hidden" name="id" defaultValue={pets.id} />
               <div>
                 <label>Pet Type</label>
                 <select
                   id="pet_type_select"
-                  name="pet_type"
-                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[2] )}
+                  name="type"
+                  onChange={(event) => this.setPetValue(event.target)}
                   defaultValue={pets.type}
                   required
                 >
@@ -79,9 +69,9 @@ class Form extends Component {
               <div>
                 <label id="pet_desc_label">Description</label>
                 <textarea
-                  name="pet_desc"
+                  name="desc"
                   id="pet_desc_textarea"
-                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[3])}
+                  onChange={(event) => this.setPetValue(event.target)}
                   defaultValue={pets.description}
                   required
                 ></textarea>
@@ -90,25 +80,25 @@ class Form extends Component {
                 <label>Skills</label>
                 <input
                   type="text"
-                  name="pet_skill_1"
+                  name="skill_1"
                   id="skill_1"
-                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[4])}
+                  onChange={(event) => this.setPetValue(event.target)}
                   defaultValue={pets.skill_1}
                   required
                 />
                 <input
                   type="text"
-                  name="pet_skill_2"
+                  name="skill_2"
                   className="pet_skills"
-                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[5])}
+                  onChange={(event) => this.setPetValue(event.target)}
                   defaultValue={pets.skill_2}
                   required
                 />
                 <input
                   type="text"
-                  name="pet_skill_3"
+                  name="skill_3"
                   className="pet_skills"
-                  onChange={(event) => this.setPetValue(event.target.value, Object.keys(pets)[6])}
+                  onChange={(event) => this.setPetValue(event.target)}
                   defaultValue={pets.skill_3}
                   required
                 />
