@@ -18,7 +18,7 @@ class App extends Component {
             active_pet_details: {}
         }
     }
-
+ 
     /** 
     *   DOCU: This method adds new sets of array object in the state data. <br>
     *   Triggered in the form component by a onSubmit and triggered the function handleOnSubmit from line 53-66 <br>
